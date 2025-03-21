@@ -1,4 +1,36 @@
-// @tailwind utilities;
-// .menu {
-//   @apply flex items-center;
-// }
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  > nav {
+    > ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      > li {
+        > a {
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.75rem;
+            height: 0.125rem;
+            width: 0;
+            background-color: black;
+            transition: all 0.3s ease;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

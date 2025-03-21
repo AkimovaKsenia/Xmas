@@ -9,7 +9,9 @@ interface IMenuItem {
 const MenuItem: FC<IMenuItem> = ({ item }) => {
   return (
     <li>
-      <Link href={item.link}>{item.name}</Link>
+      <Link className="uppercase tracking-widest" href={item.link}>
+        {item.name}
+      </Link>
     </li>
   );
 };

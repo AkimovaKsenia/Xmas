@@ -15,12 +15,12 @@ const Menu: FC = () => {
           alt="Xmas"
           width={100}
           height={100}
-          className="rounded-full overflow-hidden border-1 shadow-lg"
+          className="rounded-full overflow-hidden border-1 shadow-lg ml-4"
         />
       </Link>
 
       <nav>
-        <ul>
+        <ul className="flex items-center gap-4">
           {menu.map((item) => (
             <MenuItem key={item.link} item={item} />
           ))}
