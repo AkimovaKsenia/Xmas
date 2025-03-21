@@ -1,11 +1,8 @@
-import Page from "@/app/components/page";
-import Button from "@/app/components/Button";
+import Home from "@/app/components/screens/home/Home";
+import { NextPage } from "next";
 
-export default function Home() {
-  return (
-    <>
-      <Page />
-      <Button />
-    </>
-  );
-}
+const HomePage: NextPage = () => {
+  return <Home />;
+};
+
+export default HomePage;
