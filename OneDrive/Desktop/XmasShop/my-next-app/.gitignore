@@ -1,6 +1,9 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# игнорируемые файлы и каталоги
+*.zip
+*.log
+node_modules/
 
-# dependencies
+# зависимости
 /node_modules
 /.pnp
 .pnp.*
@@ -10,32 +13,32 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
+# тестирование
 /coverage
 
-# next.js
+# для Next.js
 /.next/
 /out/
 
-# production
+# для продакшн сборок
 /build
 
-# misc
+# различные
 .DS_Store
 *.pem
 
-# debug
+# для отладки
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# файлы окружения (можно опционально коммитить, если нужно)
 .env*
 
-# vercel
+# для Vercel
 .vercel
 
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
