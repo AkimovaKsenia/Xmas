@@ -1,9 +1,12 @@
-# игнорируемые файлы и каталоги
+# Игнорируемые файлы и каталоги
 *.zip
 *.log
-node_modules/
+*.rar
+*.pem
+*.tsbuildinfo
+*.DS_Store
 
-# зависимости
+# Зависимости
 /node_modules
 /.pnp
 .pnp.*
@@ -13,32 +16,78 @@ node_modules/
 !.yarn/releases
 !.yarn/versions
 
-# тестирование
+# Тестирование
 /coverage
 
-# для Next.js
+# Для Next.js
 /.next/
 /out/
 
-# для продакшн сборок
+# Для продакшн сборок
 /build
 
-# различные
-.DS_Store
-*.pem
-
-# для отладки
+# Для отладки
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# файлы окружения (можно опционально коммитить, если нужно)
+# Файлы окружения (можно опционально коммитить, если нужно)
 .env*
+.env.local
+.env.development
+.env.production
+.env.test
 
-# для Vercel
+# Для Vercel
 .vercel
 
 # TypeScript
-*.tsbuildinfo
 next-env.d.ts
+
+# Системные файлы и директории
+/.VirtualBox/
+/.anaconda/
+/.android/
+/.conda/
+/.condarc
+/.continuum/
+/.docker/
+/.dotnet/
+/.emulator_console_auth_token
+/.expo/
+/.gitconfig
+/.gradle/
+/.ipynb_checkpoints/
+/.ipython/
+/.jupyter/
+/.lesshst
+/.matplotlib/
+/.node_repl_history
+/.nuget/
+/.viminfo
+/.vscode/
+/.yarnrc
+/AppData/
+/Contacts/
+/Documents/
+/Downloads/
+/Favorites/
+/Links/
+/Music/
+/Saved Games/
+/Searches/
+/Videos/
+/VirtualBox VMs/
+/ntuser.*
+/desktop.ini
+
+# Локальные настройки IDE
+.idea/
+.vscode/
+
+# Локальные файлы проекта
+dist/
+.cache/
+.temp/
+.tmp/
