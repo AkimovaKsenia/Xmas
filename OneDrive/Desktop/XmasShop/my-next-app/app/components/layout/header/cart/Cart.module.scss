@@ -1,0 +1,49 @@
+.wrapper-cart {
+  margin-right: 4%;
+  position: relative;
+  .heading {
+    display: flex;
+    align-items: center;
+    .badge {
+      margin-top: 2;
+      display: flex;
+      height: 20px;
+      width: 20px;
+      align-items: center;
+      justify-content: center;
+      background-color: #302ee7;
+      border-radius: 50%;
+      color: aliceblue;
+    }
+    .text {
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+  .cart {
+    position: absolute;
+    // background-color: rgb(213, 251, 213);
+    padding: 5;
+    right: 0;
+    .item {
+    }
+    .name {
+    }
+    .price {
+    }
+  }
+}
+
+.secondary_button {
+  background-color: #3498db; /* Синий цвет фона */
+  color: white; /* Белый текст */
+  border: none; /* Убираем границу */
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  border-radius: 5px; /* Скругленные углы */
+}
+
+// Контейнер для выравнивания кнопки
+.button_container {
+  display: flex;
+  justify-content: flex-end; /* Прижимает кнопку к правому краю */
+}
