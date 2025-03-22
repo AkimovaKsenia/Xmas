@@ -34,3 +34,14 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+// Глобальные стили для Ant Design
+.ant-input {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.ant-input::placeholder {
+  // Пример изменения цвета placeholder
+  font-style: italic; // Пример изменения стиля текста
+}

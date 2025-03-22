@@ -7,8 +7,9 @@
     > ul {
       display: flex;
       align-items: center;
-      gap: 1rem;
-
+      gap: 2rem;
+      position: relative;
+      left: -2rem;
       > li {
         > a {
           text-transform: uppercase;
@@ -24,6 +25,7 @@
             width: 0;
             background-color: black;
             transition: all 0.3s ease;
+            transition-duration: 300px;
           }
 
           &:hover::after {
@@ -34,3 +36,66 @@
     }
   }
 }
+
+// .menu {
+//     @apply flex items-center gap-4
+
+//     > nav {
+//       > ul {
+//         @apply flex items-center gap-4
+//         > li {
+//           > a {
+//             text-transform: uppercase;
+//             letter-spacing: 0.05em;
+//             position: relative;
+
+//             &::after {
+//               content: "";
+//               position: absolute;
+//               left: 0;
+//               bottom: -0.75rem;
+//               height: 0.125rem;
+//               width: 0;
+//               background-color: black;
+//               transition: all 0.3s ease;
+//             }
+
+//             &:hover::after {
+//               width: 100%;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   display: flex;
+//   align-items: center;
+//   gap: 4rem;
+
+// @layer components {
+//   .menu {
+//     @apply flex items-center gap-16;
+
+//     nav {
+//       ul {
+//         @apply flex items-center gap-4;
+
+//         li {
+//           a {
+//             @apply uppercase tracking-widest relative;
+
+//             &::after {
+//               content: "";
+//               @apply absolute left-0 -bottom-3 h-0.5 w-0 bg-black transition-all;
+//             }
+
+//             &:hover::after {
+//               @apply w-full;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
