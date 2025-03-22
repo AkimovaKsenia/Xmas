@@ -13,6 +13,15 @@ const SearchComponent: FC = () => {
         enterButton
         onChange={(e) => setSearchTerm(e.target.value)}
         value={searchTerm}
+        style={{
+          boxShadow: "none", // убираем тень
+        }}
+        onFocus={(e) => {
+          e.target.style.borderColor = "#008D64"; // меняем цвет рамки при фокусе
+        }}
+        onBlur={(e) => {
+          e.target.style.borderColor = ""; // возвращаем стандартный цвет рамки при потере фокуса
+        }}
       />
     </div>
   );

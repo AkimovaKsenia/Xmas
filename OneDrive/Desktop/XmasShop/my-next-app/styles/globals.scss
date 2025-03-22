@@ -45,3 +45,12 @@ body {
   // Пример изменения цвета placeholder
   font-style: italic; // Пример изменения стиля текста
 }
+.ant-input-search-button {
+  background-color: #302ee7; /* Темно-синий цвет */
+  border-color: #302ee7; /* Темно-синий цвет для рамки */
+}
+
+.ant-input-search-button:hover {
+  background-color: #00008b; /* Немного светлее при наведении */
+  border-color: #00008b;
+}
