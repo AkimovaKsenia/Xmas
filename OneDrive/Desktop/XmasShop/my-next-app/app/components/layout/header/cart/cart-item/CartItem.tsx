@@ -1,8 +1,9 @@
 import { ICartItem } from "@/app/types/cart-item.interface";
-import { Badge, Card, Space } from "antd";
+import { Badge, Button, Card, Space } from "antd";
 import Image from "next/image";
 import { FC } from "react";
 import styles from "../Cart.module.scss";
+import CartAction from "./cart-action/CartActions";
 
 const CartItem: FC<{ item: ICartItem }> = ({ item }) => {
   return (
@@ -21,6 +22,7 @@ const CartItem: FC<{ item: ICartItem }> = ({ item }) => {
             currency: "RUB",
           }).format(item.product.price)}
         </div>
+        <CartAction item={item} />
       </div>
     </div>
   );

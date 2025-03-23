@@ -20,18 +20,70 @@
       letter-spacing: 0.05em;
     }
   }
-  .cart {
-    position: absolute;
-    // background-color: rgb(213, 251, 213);
-    padding: 5;
-    right: 0;
-    .item {
+}
+
+.cart {
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .inputContainer {
+      display: flex;
+      flex-direction: column; /* Размещаем элементы в колонку */
+      gap: 8px; /* Отступ между InputNumber и кнопкой */
     }
+
+    .removeButton {
+      background: none; /* Убираем фон */
+      border: none; /* Убираем границу */
+      align-self: flex-start; /* Выравниваем кнопку по левому краю */
+      margin-left: 5px;
+    }
+    .linkButton {
+      background: none;
+      border: none;
+      color: #6c6d6d; /* Цвет ссылки */
+      cursor: pointer;
+      padding: 0;
+      font-size: 14px;
+      &:hover {
+        color: red; /* Красный цвет при наведении */
+      }
+    }
+
     .name {
+      letter-spacing: 0.05em;
+      font-weight: 600;
     }
     .price {
+      margin-top: 2;
+      font-size: 13px;
+      color: rgb(200, 199, 198);
     }
   }
+}
+.button_container {
+  display: flex;
+  justify-content: space-between; /* Распределяет пространство между элементами */
+  align-items: center; /* Выравнивает элементы по вертикали */
+  width: 100%; /* Контейнер занимает всю ширину */
+}
+
+.cart-footer {
+  > span:first-child {
+    font-size: 12px; /* Размер текста */
+    font-weight: 600; /* Полужирный текст */
+    letter-spacing: 0.05em;
+    color: rgb(102, 102, 101);
+  }
+  > span:last-child {
+    font-size: 16px; /* Размер текста */
+    font-weight: 500; /* Полужирный текст */
+    letter-spacing: 0.05em;
+    margin-left: 5px;
+  }
+
+  //   margin-left: 120px;
 }
 
 .secondary_button {
@@ -40,10 +92,4 @@
   border: none; /* Убираем границу */
   padding: 10px 20px; /* Отступы внутри кнопки */
   border-radius: 5px; /* Скругленные углы */
-}
-
-// Контейнер для выравнивания кнопки
-.button_container {
-  display: flex;
-  justify-content: flex-end; /* Прижимает кнопку к правому краю */
 }

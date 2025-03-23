@@ -10,7 +10,7 @@ export const products: IProduct[] = [
     reviews: [],
   },
   {
-    id: 1,
+    id: 2,
     description: "Calories Total Fat 19g 29% 65%",
     name: "Strawberries & Cream Frappuccino",
     images: ["/products/PinkDrink.jpg"],
@@ -18,7 +18,7 @@ export const products: IProduct[] = [
     reviews: [],
   },
   {
-    id: 1,
+    id: 3,
     description: "Calories Total Fat 19g 29% 65%",
     name: "Java Chip Frappuccino",
     images: ["/products/Orange.jpg"],
