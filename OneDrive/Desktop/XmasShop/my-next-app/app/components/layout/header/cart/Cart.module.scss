@@ -28,8 +28,9 @@
     align-items: center;
     gap: 10px;
     .inputContainer {
+      margin-top: 8px;
       display: flex;
-      flex-direction: column; /* Размещаем элементы в колонку */
+      align-items: center;
       gap: 8px; /* Отступ между InputNumber и кнопкой */
     }
 

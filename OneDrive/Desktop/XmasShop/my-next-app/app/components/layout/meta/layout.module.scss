@@ -1,10 +1,16 @@
 .layout {
-  @apply flex flex-wrap;
+  display: flex;
+  flex-wrap: nowrap; /* Убираем перенос строк, чтобы все элементы были в одну линию */
 
+  justify-content: center; /* Центрируем контент по горизонтали */
   > main {
-    @apply bg-white py-8 px-10;
+    // background-color: rgb(206, 201, 201);
+    padding: 8px 10px;
+    width: 100%; /* Убедимся, что main занимает всю ширину */
+    max-width: 1000px;
 
     > .content {
+      position: relative;
     }
   }
 }

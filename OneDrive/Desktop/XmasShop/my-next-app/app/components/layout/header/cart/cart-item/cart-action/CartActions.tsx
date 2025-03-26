@@ -9,35 +9,52 @@ import {
   Button,
 } from "antd";
 import Image from "next/image";
-import { FC } from "react";
+import { FC, useState } from "react";
 import styles from "../../Cart.module.scss";
 import { SettingOutlined } from "@ant-design/icons";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cartSlice } from "@/app/store/slice";
 import { useActions } from "@/app/hooks/useActions";
-
+import { useCart } from "@/app/hooks/useCart";
+import CartItem from "../CartItem";
 const CartAction: FC<{ item: ICartItem }> = ({ item }) => {
   const { Option } = Select;
-  const selectBefore = (
-    <Select defaultValue="add" style={{ width: 10 }}>
-      <Option value="add">+</Option>
-    </Select>
-  );
-  const selectAfter = (
-    <Select defaultValue="minus" style={{ width: 10 }}>
-      <Option value="-">₽</Option>
-    </Select>
-  );
-  const { removeFromCart } = useActions();
+  const [quantity, setQuantity] = useState(1);
+  const increaseQuantity = () => setQuantity((prev) => prev + 1);
+  const decreaseQuantity = () =>
+    setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
+  const { removeFromCart, changeQuantity } = useActions();
+  const { cart } = useCart();
   return (
-    <Space direction="vertical">
-      <InputNumber
-        className={styles.inputContainer}
-        style={{ width: 100, marginTop: 17 }} // Уменьшаем ширину
-        addonBefore="-"
-        addonAfter="+"
-        defaultValue={1}
-      />
+    <Space direction="vertical" align="center">
+      <div className={styles.inputContainer}>
+        <Button
+          onClick={() => {
+            changeQuantity({ id: item.id, type: "minus" });
+            decreaseQuantity();
+          }}
+          className={styles.controlButton}
+          size="middle"
+        >
+          -
+        </Button>
+        <InputNumber
+          // min={1}
+          value={cart.find((CartItem) => CartItem.id == item.id)?.quantity}
+          onChange={(value) => setQuantity(value || 1)}
+          style={{ width: 50, textAlign: "center" }}
+        />
+        <Button
+          onClick={() => {
+            changeQuantity({ id: item.id, type: "plus" });
+            increaseQuantity();
+          }}
+          className={styles.controlButton}
+          size="middle"
+        >
+          +
+        </Button>
+      </div>
       <div className={styles.removeButton}>
         <Button
           className={styles.linkButton}

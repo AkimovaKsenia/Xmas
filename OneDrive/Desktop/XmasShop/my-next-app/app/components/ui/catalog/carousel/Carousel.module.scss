@@ -1,0 +1,86 @@
+.carousel {
+  margin-top: 150px;
+  display: flex; /* Используем flexbox для карусели */
+  justify-content: space-between; /* Распределяем элементы по горизонтали */
+  gap: 10px;
+  width: 100%;
+}
+
+.item {
+  border-radius: 0.75rem;
+  background-color: rgb(242, 242, 243);
+  padding: 20px; /* Уменьшаем отступы внутри элемента */
+  width: 100%; /* Убедимся, что item занимает всю ширину */
+  height: 270px; /* Убедимся, что высота фиксированная */
+  opacity: 1; /* Убираем лишнюю прозрачность */
+  .image {
+    border-radius: 0.75rem; /* 12px */
+    margin-top: -16;
+    margin-bottom: 7;
+  }
+  .heading {
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 1;
+    margin-bottom: 7;
+    color: rgb(136, 135, 135);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .description {
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    margin-top: 1;
+    opacity: 90;
+    color: darkgrey;
+  }
+
+  > div {
+    position: relative;
+  }
+  &.active {
+    box-shadow: 3px 3px 16px 5px rgba(51, 104, 62, 0.5);
+    background-size: cover; /* Фон покрывает весь контейнер */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url("../../../../../public/Frame18.png");
+    background-color: rgb(116, 180, 131);
+    height: 300px; /* Высота на 20% больше от исходной */
+    transform: translateY(-5%);
+
+    &::before {
+      content: "";
+      border-radius: 12;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.1) 10%,
+        rgb(126, 155, 126) 50%,
+        rgba(255, 255, 255, 0.5) 90%
+      );
+      //   rgb(126, 155, 126) 40%,
+      //   rgba(255, 255, 255, 0.501558) 75%
+      //   rgba(255, 255, 255, 0) 10%,
+      //   rgb(126, 155, 126) 50%,
+      //   rgba(255, 255, 255, 0.5) 90%
+      //   rgba(255, 255, 255, 0) 10%,
+      //     rgb(126, 155, 126) 30%,
+      //     rgba(255, 255, 255, 0.5) 60%
+    }
+    .heading {
+      line-height: 1;
+      color: white;
+      font-size: 21px;
+      font-weight: 900;
+    }
+  }
+}
