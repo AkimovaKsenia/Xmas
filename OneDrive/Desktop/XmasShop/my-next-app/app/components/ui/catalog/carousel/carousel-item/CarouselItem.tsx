@@ -6,6 +6,7 @@ import cn from "clsx";
 import { Button } from "antd";
 import { useActions } from "@/app/hooks/useActions";
 import CarouselButton from "./CarouselButton";
+import CarouselVariations from "./CarouselVariations";
 
 const CarouselItem: FC<{ product: IProduct }> = ({ product }) => {
   const isActive = product.id == 2;
@@ -23,6 +24,7 @@ const CarouselItem: FC<{ product: IProduct }> = ({ product }) => {
         <div className={styles.heading}>{product.name}</div>
         {isActive ? (
           <>
+            <CarouselVariations />
             <CarouselButton product={product} />
           </>
         ) : (

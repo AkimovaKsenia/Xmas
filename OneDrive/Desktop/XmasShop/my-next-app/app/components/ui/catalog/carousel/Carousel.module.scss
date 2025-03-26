@@ -43,6 +43,26 @@
   > div {
     position: relative;
   }
+  .variations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4;
+    margin-top: 15px;
+    > button {
+      border: 1px solid white; /* Рамка белого цвета */
+      border-radius: 10px;
+      background-color: transparent; /* Прозрачный фон */
+      padding: 0.5rem; /* Эквивалент px-2 в Tailwind (обычно 8px) */
+      color: white; /* Белый текст */
+      font-size: 10px;
+      font-weight: 600;
+      &.active {
+        background-color: white;
+        color: rgb(13, 144, 96);
+      }
+    }
+  }
+
   &.active {
     box-shadow: 3px 3px 16px 5px rgba(51, 104, 62, 0.5);
     background-size: cover; /* Фон покрывает весь контейнер */
@@ -50,8 +70,9 @@
     background-repeat: no-repeat;
     background-image: url("../../../../../public/Frame18.png");
     background-color: rgb(116, 180, 131);
-    height: 300px; /* Высота на 20% больше от исходной */
-    transform: translateY(-5%);
+    height: 310px; /* Высота на 20% больше от исходной */
+    // width: 400px;
+    transform: translateY(-7%);
 
     &::before {
       content: "";

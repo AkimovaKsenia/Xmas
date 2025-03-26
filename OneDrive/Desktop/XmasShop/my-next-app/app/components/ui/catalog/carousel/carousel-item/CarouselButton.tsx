@@ -8,7 +8,7 @@ const CarouselButton: FC<{ product: IProduct }> = ({ product }) => {
   const { addToCart } = useActions();
   return (
     <Button
-      className="mt-15 ml-9 rounded-xl w-30"
+      className="mt-7 ml-11 rounded-xl w-30"
       onClick={() =>
         addToCart({
           product,
