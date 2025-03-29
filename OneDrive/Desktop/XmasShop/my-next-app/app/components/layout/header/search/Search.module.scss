@@ -7,13 +7,18 @@
   }
   &::before {
     content: "";
-    border-radius: 5%;
-    background-color: rgb(213, 251, 213); // Заменяет @apply bg-light-green
-    width: 35rem; // Заменяет @apply w-80 (1rem = 4px, 20rem = 80px)
+    // border-radius: 45%;
+    background-color: rgba(
+      111,
+      176,
+      135,
+      0.5
+    ); // Заменяет @apply bg-light-green
+    width: 25rem; // Заменяет @apply w-80 (1rem = 4px, 20rem = 80px)
     height: 25rem; // Заменяет @apply h-80
     border-radius: 50%; // Заменяет @apply rounded-full
     position: absolute; // Заменяет @apply absolute
-    top: -900%;
-    left: -55%;
+    top: -500%;
+    left: -35%;
   }
 }

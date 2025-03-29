@@ -7,6 +7,7 @@
 }
 
 .item {
+  cursor: pointer;
   border-radius: 0.75rem;
   background-color: rgb(242, 242, 243);
   padding: 20px; /* Уменьшаем отступы внутри элемента */
@@ -47,12 +48,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4;
-    margin-top: 15px;
+    margin-top: 19px;
     > button {
-      border: 1px solid white; /* Рамка белого цвета */
+      border: 1.5px solid white;
       border-radius: 10px;
       background-color: transparent; /* Прозрачный фон */
-      padding: 0.5rem; /* Эквивалент px-2 в Tailwind (обычно 8px) */
+      padding: 0.5rem;
       color: white; /* Белый текст */
       font-size: 10px;
       font-weight: 600;
