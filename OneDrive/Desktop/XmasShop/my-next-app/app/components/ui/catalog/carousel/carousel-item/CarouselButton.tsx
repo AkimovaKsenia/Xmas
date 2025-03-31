@@ -3,7 +3,8 @@ import cn from "clsx";
 import { Button } from "antd";
 import { useActions } from "@/app/hooks/useActions";
 import { IProduct } from "@/app/types/product.interface";
-import { TypeSize } from "@/app/store/types";
+import { TypeSize } from "@/app/store/cart/cart.types";
+import { useCart } from "@/app/hooks/useCart";
 
 interface ICarouselButton {
   product: IProduct;
@@ -11,20 +12,27 @@ interface ICarouselButton {
 }
 
 const CarouselButton: FC<ICarouselButton> = ({ product, selectedSize }) => {
-  const { addToCart } = useActions();
+  const { addToCart, removeFromCart } = useActions();
+  const { cart } = useCart();
+  const currentElement = cart.find(
+    (cartItem) =>
+      cartItem.product.id == product.id && cartItem.size == selectedSize
+  );
   return (
     <div className="flex justify-center items-center">
       <Button
-        className="mt-5 ml-0.1 rounded-xl w-30"
+        className="mt-5  rounded-xl w-30"
         onClick={() =>
-          addToCart({
-            product,
-            quantity: 1,
-            size: selectedSize,
-          })
+          currentElement
+            ? removeFromCart({ id: currentElement.id })
+            : addToCart({
+                product,
+                quantity: 1,
+                size: selectedSize,
+              })
         }
       >
-        Add to Cart
+        {currentElement ? "Remove from Cart" : "Add to Cart"}
       </Button>
     </div>
   );

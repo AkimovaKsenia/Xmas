@@ -1,4 +1,6 @@
 import { IProduct } from "../types/product.interface";
+import { IRewiew } from "../types/rewiews.interface";
+import { rewiews } from "./rewiew.data";
 
 export const products: IProduct[] = [
   {
@@ -7,7 +9,7 @@ export const products: IProduct[] = [
     name: "Midnight Mint Frappuccino",
     images: ["/products/MintFrapp.jpg", "/products/Orange.jpg"],
     price: 500,
-    reviews: [],
+    reviews: rewiews.filter((r) => r.productID === 1),
   },
   {
     id: 2,
@@ -16,7 +18,7 @@ export const products: IProduct[] = [
     name: "Strawberries & Cream Frappuccino",
     images: ["/products/Drink.jpg"],
     price: 400,
-    reviews: [],
+    reviews: rewiews.filter((r) => r.productID === 2),
   },
   {
     id: 3,
@@ -24,7 +26,7 @@ export const products: IProduct[] = [
     name: "Cookie Crumble Frappuccino Blended Beverage",
     images: ["/products/ChocoChip.jpg"],
     price: 900,
-    reviews: [],
+    reviews: rewiews.filter((r) => r.productID === 3),
   },
   {
     id: 4,
@@ -32,7 +34,7 @@ export const products: IProduct[] = [
       "Calories Total Fat 19g 29% 65% Whole Milk Whipped Cream Strawberry Purée Classic Syrup pumps",
     name: "Caramel Ribbon Crunch Frappuccino® Blended Beverage",
     images: ["/products/CookieFrapp.jpg"],
-    price: 900,
-    reviews: [],
+    price: 9800,
+    reviews: rewiews.filter((r) => r.productID === 4),
   },
 ];

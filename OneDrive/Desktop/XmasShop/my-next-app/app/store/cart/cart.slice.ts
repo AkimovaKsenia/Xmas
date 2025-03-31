@@ -3,12 +3,12 @@ import {
   IAddToCartPayload,
   IChangeQuantityPayload,
   IChangeSizePayload,
-  IInitialState,
-} from "./types";
-import { cart } from "../data/cart.data";
+  ICartInitialState,
+} from "./cart.types";
+import { cart } from "../../data/cart.data";
 
-const initialState: IInitialState = {
-  items: cart,
+const initialState: ICartInitialState = {
+  items: [],
 };
 
 export const cartSlice = createSlice({

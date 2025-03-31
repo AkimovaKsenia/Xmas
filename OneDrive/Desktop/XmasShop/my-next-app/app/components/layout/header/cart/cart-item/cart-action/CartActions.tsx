@@ -13,7 +13,7 @@ import { FC, useState } from "react";
 import styles from "../../Cart.module.scss";
 import { SettingOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
-import { cartSlice } from "@/app/store/slice";
+import { cartSlice } from "@/app/store/cart/cart.slice";
 import { useActions } from "@/app/hooks/useActions";
 import { useCart } from "@/app/hooks/useCart";
 import CartItem from "../CartItem";

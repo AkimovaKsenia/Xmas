@@ -1,5 +1,5 @@
 .carousel {
-  margin-top: 150px;
+  margin-top: 60px;
   display: flex; /* Используем flexbox для карусели */
   justify-content: space-between; /* Распределяем элементы по горизонтали */
   gap: 10px;
@@ -32,6 +32,8 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    will-change: transform;
+    backface-visibility: hidden;
   }
   .description {
     font-size: 10px;
@@ -48,7 +50,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4;
-    margin-top: 19px;
+    margin-top: 16px;
     > button {
       border: 1.5px solid white;
       border-radius: 10px;
@@ -71,9 +73,9 @@
     background-repeat: no-repeat;
     background-image: url("../../../../../public/Frame18.png");
     background-color: rgb(116, 180, 131);
-    height: 310px; /* Высота на 20% больше от исходной */
+    height: 300px; /* Высота на 20% больше от исходной */
     // width: 400px;
-    transform: translateY(-7%);
+    transform: translateY(-30%);
 
     &::before {
       content: "";
@@ -103,6 +105,7 @@
       color: white;
       font-size: 21px;
       font-weight: 900;
+      transition: all;
     }
   }
 }

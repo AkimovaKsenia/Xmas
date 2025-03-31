@@ -1,5 +1,5 @@
 import { combineReducers, configureStore, createSlice } from "@reduxjs/toolkit";
-import { cartSlice } from "./slice";
+import { cartSlice } from "./cart/cart.slice";
 import {
   persistStore,
   persistReducer,
@@ -11,6 +11,7 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
+import { carouselSlice } from "./carousel/carousel.slice";
 
 const persistConfig = {
   key: "xmas-shop",
@@ -19,6 +20,7 @@ const persistConfig = {
 };
 const rootReducer = combineReducers({
   cart: cartSlice.reducer,
+  carousel: carouselSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

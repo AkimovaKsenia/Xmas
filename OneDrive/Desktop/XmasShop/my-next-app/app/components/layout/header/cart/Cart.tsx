@@ -22,7 +22,6 @@
 //   );
 // };
 // export default Cart;
-
 import { Badge, Button, Card, Drawer, Space } from "antd";
 import { FC, useState } from "react";
 import styles from "./Cart.module.scss";

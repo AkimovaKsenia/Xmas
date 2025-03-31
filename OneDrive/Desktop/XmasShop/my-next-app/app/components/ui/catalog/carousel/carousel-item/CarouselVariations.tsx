@@ -3,7 +3,7 @@ import cn from "clsx";
 import { useActions } from "@/app/hooks/useActions";
 import { IProduct } from "@/app/types/product.interface";
 import styles from "../Carousel.module.scss";
-import { TypeSize } from "@/app/store/types";
+import { TypeSize } from "@/app/store/cart/cart.types";
 import { useCart } from "@/app/hooks/useCart";
 
 const Sizes: TypeSize[] = ["SHORT", "TALL", "GRANDE", "VENTI"];

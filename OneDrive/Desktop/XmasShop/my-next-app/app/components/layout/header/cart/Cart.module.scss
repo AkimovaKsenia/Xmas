@@ -1,7 +1,9 @@
 .wrapper-cart {
   margin-right: 4%;
   position: relative;
+
   .heading {
+    background-color: #568e73;
     display: flex;
     align-items: center;
     .badge {
@@ -11,9 +13,16 @@
       width: 20px;
       align-items: center;
       justify-content: center;
-      background-color: #302ee7;
+      background-color: #495851;
       border-radius: 50%;
       color: aliceblue;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #3a6b56 !important; // Принудительно применяем цвет
+        outline: none !important;
+        box-shadow: none !important;
+      }
     }
     .text {
       text-transform: uppercase;
@@ -93,7 +102,7 @@
 }
 
 .secondary_button {
-  background-color: #3498db; /* Синий цвет фона */
+  background-color: #34db42; /* Синий цвет фона */
   color: white; /* Белый текст */
   border: none; /* Убираем границу */
   padding: 10px 20px; /* Отступы внутри кнопки */
