@@ -6,8 +6,9 @@ import Layout from "../../layout/meta/Layout";
 import Heading from "../../ui/heading/Heading";
 import Sorting from "../../ui/catalog/sorting/Sorting";
 import Stars from "./Stars";
+import { IProductPage } from "@/pages";
 
-const Home: FC = () => {
+const Home: FC<IProductPage> = ({ products }) => {
   return (
     <div style={{ width: "100%" }}>
       <Stars />

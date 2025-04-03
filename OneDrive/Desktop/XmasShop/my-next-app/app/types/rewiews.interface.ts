@@ -2,7 +2,7 @@ import { IProduct } from "./product.interface";
 
 export interface IRewiew {
   id: number;
-  productID: number;
+  product: IProduct;
   text: string;
   rating: number;
 }

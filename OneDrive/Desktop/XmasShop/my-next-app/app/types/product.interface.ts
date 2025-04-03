@@ -8,3 +8,4 @@ export interface IProduct {
   reviews: IRewiew[];
   images: string[];
 }
+export type sortType = "oldest" | "newest" | "low-to-high" | "high-to-low";

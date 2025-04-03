@@ -89,6 +89,7 @@ const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
       <div>
         <Image
           className={styles.image}
+          // src={`/products/${encodeURIComponent(product.images[0].trim())}`}
           src={product.images[0]}
           alt={product.name}
           width={100}

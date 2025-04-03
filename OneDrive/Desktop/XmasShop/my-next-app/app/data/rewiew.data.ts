@@ -1,40 +1,41 @@
+import { IProduct } from "../types/product.interface";
 import { IRewiew } from "../types/rewiews.interface";
 import { products } from "./product.data";
 
 export const rewiews: IRewiew[] = [
   {
     id: 1,
-    productID: 1,
+    product: {} as IProduct,
     rating: 1,
     text: "Hello,world!",
   },
   {
     id: 2,
-    productID: 2,
+    product: {} as IProduct,
     rating: 4,
     text: "Hello,world!",
   },
   {
     id: 3,
-    productID: 1,
+    product: {} as IProduct,
     rating: 5,
     text: "Hello,world!",
   },
   {
     id: 4,
-    productID: 1,
+    product: {} as IProduct,
     rating: 4,
     text: "Hello,world!",
   },
   {
     id: 5,
-    productID: 3,
+    product: {} as IProduct,
     rating: 2,
     text: "Hello,world!",
   },
   {
     id: 6,
-    productID: 4,
+    product: {} as IProduct,
     rating: 3,
     text: "Hello,world!",
   },

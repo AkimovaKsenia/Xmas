@@ -9,7 +9,7 @@ export const products: IProduct[] = [
     name: "Midnight Mint Frappuccino",
     images: ["/products/MintFrapp.jpg", "/products/Orange.jpg"],
     price: 500,
-    reviews: rewiews.filter((r) => r.productID === 1),
+    reviews: [rewiews[1], rewiews[4]],
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export const products: IProduct[] = [
     name: "Strawberries & Cream Frappuccino",
     images: ["/products/Drink.jpg"],
     price: 400,
-    reviews: rewiews.filter((r) => r.productID === 2),
+    reviews: [rewiews[0], rewiews[1]],
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const products: IProduct[] = [
     name: "Cookie Crumble Frappuccino Blended Beverage",
     images: ["/products/ChocoChip.jpg"],
     price: 900,
-    reviews: rewiews.filter((r) => r.productID === 3),
+    reviews: [rewiews[0], rewiews[1]],
   },
   {
     id: 4,
@@ -35,6 +35,6 @@ export const products: IProduct[] = [
     name: "Caramel Ribbon Crunch Frappuccino® Blended Beverage",
     images: ["/products/CookieFrapp.jpg"],
     price: 9800,
-    reviews: rewiews.filter((r) => r.productID === 4),
+    reviews: [rewiews[0], rewiews[1]],
   },
 ];

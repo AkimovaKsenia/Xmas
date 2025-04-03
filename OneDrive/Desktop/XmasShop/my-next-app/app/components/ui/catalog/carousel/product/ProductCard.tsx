@@ -19,6 +19,7 @@ interface IProductItem {
 
 const ProductCard: FC<IProductItem> = ({ product, index, onClose }) => {
   // const isActive = product.id == 2;
+  const reviews = product.reviews || [];
   const { SelectSlide, addToCart } = useActions();
   const [isHovered, setIsHovered] = useState(false); // Добавлено состояние для отслеживания наведения
 
@@ -36,7 +37,11 @@ const ProductCard: FC<IProductItem> = ({ product, index, onClose }) => {
 
       <div className={styles.description}>
         {product.reviews.map((review) => (
-          <p key={review.id}>{review.text}</p>
+          <div key={review.id}>
+            <ProductRating reviews={[review]} />{" "}
+            {/* Передаем массив из одного отзыва */}
+            <p>{review.text}</p>
+          </div>
         ))}
       </div>
     </div>
