@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Высота на весь экран */
+  // background-image: url("../../../assets/1.2.png"); // путь к картинке
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-size: 60%;
+  // background-position: left 10%;
+}
+
+.form {
+  width: 100%;
+  max-width: 600px; /* Ограничим ширину формы */
+  height: 280px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  // background-color: rgba(255, 255, 255, 0.9);
+  background-color: #fff;
+  background-image: url("../../../assets/28bc7517b5d45577b09b30e513c8c8f5.jpg"); // путь к картинке
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: calc(100% + 3%) top;
+}
+
+.content {
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start; /* размещаем влево */
+  gap: 10px;
+  margin-left: -90px;
+
+  // margin-right: 420px;
+  // display: flex;
+  // justify-content: left;
+  // gap: 10px;
+}
+
+.input {
+  margin-right: 280px;
+  text-transform: none !important;
+}
