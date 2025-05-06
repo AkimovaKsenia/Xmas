@@ -34,10 +34,15 @@ const Sorting: FC<ISorting> = ({ sortType, setSortType }) => {
       mode="vertical"
     >
       <SubMenu
+        className={styles.container}
+        style={{ color: "#568E73" }}
         key="sub2"
         icon={<FaRegStar style={{ color: "#568E73" }} />}
         title={
-          <span style={{ color: "#568E73", fontWeight: 500 }}>
+          <span
+            className={styles.title}
+            style={{ color: "#568E73", fontWeight: 700, fontSize: 16 }}
+          >
             {sortingData.find((sort) => sort.value == sortType)?.label}
           </span>
         }

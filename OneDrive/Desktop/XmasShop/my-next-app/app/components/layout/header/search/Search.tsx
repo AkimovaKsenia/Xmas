@@ -7,10 +7,8 @@ const SearchComponent: FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   return (
     <div className={styles.search}>
-      <Search
+      <Input
         placeholder="Your Change..."
-        loading
-        enterButton
         onChange={(e) => setSearchTerm(e.target.value)}
         value={searchTerm}
         style={{

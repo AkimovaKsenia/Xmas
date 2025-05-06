@@ -1,0 +1,35 @@
+.checkoutContainer {
+  max-width: 500px;
+  margin: 50 auto;
+  padding: 20px;
+}
+
+.orderCard {
+  margin-bottom: 20px;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.totalSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.payButton {
+  background-color: #568e73; /* Оранжевый */
+  border-color: #568e73;
+  margin-top: 20px;
+  height: 50px;
+  font-size: 16px;
+}
+
+.backButton {
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+}

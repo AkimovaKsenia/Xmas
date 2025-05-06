@@ -1,27 +1,3 @@
-// import { Badge, Button, Card, Drawer, Space } from "antd";
-// import { FC, useState } from "react";
-// import styles from "./Cart.module.scss";
-// import CartItem from "./cart-item/CartItem";
-// import { cart } from "@/app/data/cart.data";
-// const Cart: FC = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   return (
-//     <div className={styles["wrapper-cart"]}>
-//       <button className={styles.heading} onClick={() => setIsOpen(!isOpen)}>
-//         <span className={styles.badge}>1</span>
-//         <span className={styles.text}>My Basket</span>
-//       </button>
-//       {isOpen && (
-//         <div className={styles.cart}>
-//           {cart.map((item) => (
-//             <CartItem item={item} key={item.id} />
-//           ))}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-// export default Cart;
 import { Badge, Button, Card, Drawer, Space } from "antd";
 import { FC, useState } from "react";
 import styles from "./Cart.module.scss";
@@ -30,10 +6,19 @@ import { cart } from "@/app/data/cart.data";
 import { useTypedSelector } from "@/app/hooks/useTypedSelector";
 import { formatToCurrency } from "@/app/utils/format-to-currency";
 import { useCart } from "@/app/hooks/useCart";
+import { useRouter } from "next/router";
 
 const Cart: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { cart, total } = useCart();
+  const router = useRouter();
+  const handleCheckout = () => {
+    setIsOpen(false);
+    router.push({
+      pathname: "/checkout",
+      query: { fromCart: true }, // Можно передать дополнительные параметры
+    });
+  };
   return (
     <div className={styles["wrapper-cart"]}>
       <Button
@@ -60,7 +45,9 @@ const Cart: FC = () => {
             <span>{formatToCurrency(total)}</span>
           </div>
           <Button className={styles.secondary_button}>
-            <span className={styles.text}>Checkout</span>
+            <span className={styles.text} onClick={handleCheckout}>
+              Checkout
+            </span>
           </Button>
         </div>
       </Drawer>
