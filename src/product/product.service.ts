@@ -81,4 +81,56 @@ export class ProductService {
       },
     });
   }
+  getNewest() {
+    return this.prisma.product.findMany({
+      orderBy: { createdAt: 'desc' },
+      take: 10,
+    });
+  }
+  async getPopular() {
+    return this.prisma.product.findMany({
+      orderBy: {
+        reviews: {
+          _count: 'desc',
+        },
+      },
+      take: 10,
+    });
+  }
+
+  async getPriceRange() {
+    try {
+      const result = await this.prisma.$queryRawUnsafe<
+        { min: number; max: number }[]
+      >(`SELECT MIN(price) as min, MAX(price) as max FROM "Product"`); // или "products", если у тебя переименовано
+
+      if (!result || result.length === 0) {
+        return { min: 0, max: 0 };
+      }
+
+      return result[0];
+    } catch (error) {
+      console.error('Error in getPriceRange:', error);
+      throw new Error('Failed to get price range');
+    }
+  }
+  async update(id: number, dto: UpdateProductDto) {
+    const product = await this.prisma.product.findUnique({ where: { id } });
+    if (!product) {
+      throw new NotFoundException('Product not found');
+    }
+
+    return this.prisma.product.update({
+      where: { id },
+      data: dto,
+    });
+  }
+  async remove(id: number) {
+    const product = await this.prisma.product.findUnique({ where: { id } });
+    if (!product) {
+      throw new NotFoundException('Product not found');
+    }
+
+    return this.prisma.product.delete({ where: { id } });
+  }
 }
