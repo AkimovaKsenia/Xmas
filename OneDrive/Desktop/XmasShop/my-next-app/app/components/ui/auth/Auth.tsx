@@ -5,7 +5,7 @@ import { IAuthForm, IAuthResponse } from "@/app/types/auth.types";
 import { useMutation } from "@tanstack/react-query";
 import type { FormProps } from "antd";
 import { Button, Checkbox, Form, Input } from "antd";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation"; // Исправленный импорт
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -45,6 +45,7 @@ export function Auth() {
   return (
     <div className={styles.container}>
       <Form
+        form={form}
         name="basic"
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
